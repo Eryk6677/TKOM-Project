@@ -1,0 +1,16 @@
+# match case statement
+def void main() {
+    int number = 16;
+
+    match(number) {
+        >1 && <10 => {
+            print("Small");
+        }
+        >=10 && <20 => {
+            print("Medium");
+        }
+        >=20 && <30 => {
+            print("Big");
+        }
+    }
+}

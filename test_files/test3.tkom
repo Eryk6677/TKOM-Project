@@ -1,0 +1,64 @@
+# EXAMPLE 3
+
+def void main() {
+    int number = 3;
+
+    match(number) {
+        >10 => {
+            print("Number is larger than 10");
+        }
+        <50 => {
+            print("Number is smaller than 50");
+        }
+        >20 && <40 => {
+            print("Number is between 20 and 40");
+        }
+        is_even => {
+            print("Number is even");
+        }
+        is_odd => {
+            print("Number is odd");
+        }
+        is_div_3 => {
+            print("Number is divisible by 3");
+
+            int fac = factorial(var);
+            string result = "Factorial: " + to_string(fac);
+            print(result);
+        }
+    }
+}
+
+def bool is_even(int num) {
+    if(num%2 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+def bool is_odd(int num) {
+    return !is_even(num);
+}
+
+def bool is_div_3(int num) {
+    if(num%3 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+def int factorial(mut int num) {
+    if(num == 0) {
+        return 1;
+    } else {
+        mut int result = 1;
+
+        while(num > 1) {
+            result = result * num;
+            num = num - 1;
+        }
+        return result;
+    }
+}

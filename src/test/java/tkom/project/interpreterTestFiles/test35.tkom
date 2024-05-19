@@ -1,0 +1,6 @@
+# redefined global variable
+int variable = 15;
+
+def void main() {
+    int variable = 20;
+}

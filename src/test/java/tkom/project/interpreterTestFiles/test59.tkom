@@ -1,0 +1,10 @@
+# exist statement non optional
+def void main() {
+    string name;
+
+    exist(name) {
+        print(message);
+    } else {
+        print("NoValue");
+    }
+}

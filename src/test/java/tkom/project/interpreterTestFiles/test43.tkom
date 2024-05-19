@@ -1,0 +1,30 @@
+# while statement
+def void main() {
+    mut int number = 2;
+
+    while(factorial(number) < 1000000) {
+        number = number + 1;
+        if (number>100) {
+            break;
+        } else {
+            continue;
+        }
+    }
+    print(to_string(number));
+}
+
+
+
+def int factorial(mut int num) {
+    if(num == 0) {
+        return 1;
+    } else {
+        mut int result = 1;
+
+        while(num > 1) {
+            result = result * num;
+            num = num - 1;
+        }
+        return result;
+    }
+}

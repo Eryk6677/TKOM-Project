@@ -1,0 +1,8 @@
+# Return FLOAT on VOID
+def void main() {
+    float returnedFloatValue = getFloatValue();
+}
+
+def void getFloatValue() {
+    return 123.123;
+}

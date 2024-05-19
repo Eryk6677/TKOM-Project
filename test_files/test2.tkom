@@ -1,0 +1,25 @@
+# EXAMPLE 2
+
+def void main() {
+    greetings(get_name());
+}
+
+def string get_name() {
+    print("Enter your name: ");
+    string name = input();
+
+    if(name != "") {
+        return name;
+    } else {
+        return;                 # pozostawienie pustego return zwróci NULL
+    }
+}
+
+def void greetings(string? name) {
+    exist(name) {               # (substytut IF, sprawdza czy podana zmienna opcjonalna ma przypisaną wartość i wykonuje blok instrukcyjny
+        string message = "Welcome " + name;
+        print(message);
+    } else {
+        print("No name given");
+    }
+}

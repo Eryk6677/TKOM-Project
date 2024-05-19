@@ -1,0 +1,16 @@
+# funcCall1Param
+def void main() {
+    int number = 5;
+    int callResult = sum_all(number);
+    int next = sum_all(callResult);
+
+    print(to_string(next));
+}
+
+def int sum_all(int num) {
+    if (num > 0) {
+        return num + sum_all(num-1);
+    } else {
+        return 0;
+    }
+}

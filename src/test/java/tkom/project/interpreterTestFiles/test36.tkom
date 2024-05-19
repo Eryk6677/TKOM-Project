@@ -1,0 +1,5 @@
+# variable already defined
+def void main() {
+    int variable;
+    int variable;
+}

@@ -1,0 +1,12 @@
+# while incorrect condition
+def void main() {
+    mut int num = 2;
+
+    while("number" < 5) {
+        num = number + 1;
+        if (number>100) {
+            break;
+        }
+    }
+    print(to_string(number));
+}

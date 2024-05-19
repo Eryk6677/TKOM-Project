@@ -1,0 +1,18 @@
+# complex if case
+def void main() {
+    print(to_string(factorial(10)));
+}
+
+def int factorial(mut int num) {
+    if(num == 0) {
+        return 1;
+    } else {
+        mut int result = 1;
+
+        while(num > 1) {
+            result = result * num;
+            num = num - 1;
+        }
+        return result;
+    }
+}

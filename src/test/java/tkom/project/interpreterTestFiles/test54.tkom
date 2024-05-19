@@ -1,0 +1,6 @@
+def void main() {
+    int value = 7;
+    float result = to_float(value)+0.5;
+
+    print(to_string(result));
+}

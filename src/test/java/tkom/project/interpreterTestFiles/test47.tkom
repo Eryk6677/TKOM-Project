@@ -1,0 +1,13 @@
+# match case statement
+def void main() {
+    int number = 3;
+
+    match(number) {
+        >10 => {
+            print("Test1");
+        }
+        <50 => {
+            print("Test2");
+        }
+    }
+}

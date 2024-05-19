@@ -1,0 +1,8 @@
+# funcCall2Params
+def void main() {
+    int value = sum("test", 7);
+}
+
+def int sum(int num1, int num2) {
+    return num1+num2;
+}

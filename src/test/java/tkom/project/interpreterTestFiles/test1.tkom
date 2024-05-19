@@ -1,0 +1,6 @@
+# simpleTest
+string msg = "test";
+
+def void main() {
+    print(msg);
+}

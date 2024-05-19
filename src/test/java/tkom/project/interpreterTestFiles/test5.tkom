@@ -1,0 +1,7 @@
+# fromStringToInt
+def void main() {
+    string initial = "123";
+    int new = to_int(initial);
+
+    print(to_string(new));
+}

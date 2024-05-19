@@ -1,0 +1,4 @@
+# not declared function
+def void main() {
+    bool test = notDeclaredFunction(100);
+}

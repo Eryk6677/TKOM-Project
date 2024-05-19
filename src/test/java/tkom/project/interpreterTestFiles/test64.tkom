@@ -1,0 +1,4 @@
+# not declared variable
+def void main() {
+    int value = someOtherValue;
+}

@@ -1,0 +1,12 @@
+# reserved function name
+def void main() {
+    int value = sum(15, 16);
+}
+
+def int sum(int num1, int num2) {
+    return num1+num2;
+}
+
+def string input() {
+    return "input field";
+}

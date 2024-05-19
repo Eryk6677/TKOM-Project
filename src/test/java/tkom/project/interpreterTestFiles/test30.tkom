@@ -1,0 +1,8 @@
+# Return BOOL on VOID
+def void main() {
+    bool returnedBoolValue = getBooleanValue();
+}
+
+def void getBooleanValue() {
+    return true;
+}

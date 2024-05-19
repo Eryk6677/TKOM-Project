@@ -1,0 +1,38 @@
+# EXAMPLE 1
+
+string msg = "Enter starting number: ";
+
+def void main() {
+    print(msg);
+    int num = to_int(input());             # input umożliwia wczytanie znaków z konsoli w postaci Stringa, ale korzystając z int() castujemy jego wartość do postaci liczbowej
+
+    int all = sum_all(num);
+    int even = sum_even(num);           # ponieważ zmienne są przekazywane przez wartość, nie jest to ważne czy przekazywana zmienna jest mutowalna czy też nie
+
+    int odd = all - even;
+    string result = "Result: " + to_string(odd);
+    print(result);
+}
+
+def int sum_all(int num) {
+    if (num > 0) {
+        return num + sum_all(num-1);    # Rekurencyjne wywołanie funkcji
+    } else {
+        return 0;
+    }
+}
+
+def int sum_even(mut int num) {
+    mut int result = 0;
+
+    while (num > 0) {
+        if (num%2 == 0) {
+            result = result + num;
+            num = num - 1;
+        } else {
+            num = num - 1;
+            continue;
+        }
+    }
+    return result;
+}

@@ -1,0 +1,13 @@
+# function defined twice
+def void main() {
+    int value = sum(1,2);
+}
+
+def int sum(int num1, int num2) {
+    return num1+num2;
+}
+
+def int sum(int num1, int num2) {
+    int result = num1+num2;
+    return result;
+}

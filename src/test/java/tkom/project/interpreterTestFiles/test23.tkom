@@ -1,0 +1,10 @@
+# Return INT
+def void main() {
+    int returnedIntValue = getIntegerValue();
+
+    print(to_string(returnedIntValue));
+}
+
+def int getIntegerValue() {
+    return 123;
+}

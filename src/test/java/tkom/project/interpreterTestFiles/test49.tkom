@@ -1,0 +1,25 @@
+# match case statement
+def void main() {
+    int number = 9;
+
+    match(number) {
+        is_even => {
+            print("even");
+        }
+        is_odd => {
+            print("odd");
+        }
+    }
+}
+
+def bool is_even(int num) {
+    if(num%2 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+def bool is_odd(int num) {
+    return !is_even(num);
+}

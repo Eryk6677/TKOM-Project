@@ -1,0 +1,10 @@
+# Return STRING
+def void main() {
+    string returnedStringValue = getStringValue();
+
+    print(returnedStringValue);
+}
+
+def string getStringValue() {
+    return "test";
+}

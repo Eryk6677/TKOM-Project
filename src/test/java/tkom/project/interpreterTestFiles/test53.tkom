@@ -1,0 +1,9 @@
+def void main() {
+    int result = incrementValue(incrementValue(incrementValue(6)));
+
+    print(to_string(result));
+}
+
+def int incrementValue(int num) {
+    return num+1;
+}

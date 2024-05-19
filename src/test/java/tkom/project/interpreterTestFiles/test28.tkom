@@ -1,0 +1,8 @@
+# Return INT on VOID
+def void main() {
+    int returnedIntValue = getIntegerValue();
+}
+
+def void getIntegerValue() {
+    return 123;
+}

@@ -1,0 +1,6 @@
+# fromFloatToString
+def void main() {
+    float initial = 456.789;
+    string new = to_string(initial);
+    print(new);
+}

@@ -1,0 +1,6 @@
+# fromStringToString
+def void main() {
+    string initial = "test";
+    string new = to_string(initial);
+    print(new);
+}

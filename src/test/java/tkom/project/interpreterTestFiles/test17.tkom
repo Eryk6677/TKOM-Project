@@ -1,0 +1,6 @@
+# fromBoolToString
+def void main() {
+    bool initial = true;
+    string new = to_string(initial);
+    print(new);
+}

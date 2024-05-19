@@ -1,0 +1,10 @@
+# fromFloatToInt
+def void main() {
+    float initial1 = 1.111;
+    float initial2 = 8.888;
+
+    int new1 = to_int(initial1);
+    int new2 = to_int(initial2);
+
+    print(to_string(new1)+" "+to_string(new2));
+}

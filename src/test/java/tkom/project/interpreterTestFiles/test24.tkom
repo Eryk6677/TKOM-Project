@@ -1,0 +1,10 @@
+# Return FLOAT
+def void main() {
+    float returnedFloatValue = getFloatValue();
+
+    print(to_string(returnedFloatValue));
+}
+
+def float getFloatValue() {
+    return 123.123;
+}

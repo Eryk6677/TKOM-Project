@@ -1,0 +1,5 @@
+# fromBoolToFloatException
+def void main() {
+    bool initial = true;
+    to_float(initial);
+}

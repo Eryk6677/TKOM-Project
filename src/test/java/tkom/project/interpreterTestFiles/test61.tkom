@@ -1,0 +1,3 @@
+def void main() {
+    bool value = (6 > 5) || 5;
+}

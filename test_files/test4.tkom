@@ -1,0 +1,14 @@
+
+def void main() {
+    int x = halo(10);
+    print(to_string(x));
+}
+
+def void halo(mut int y) {
+    test();
+    return;
+}
+
+def int test() {
+    return 6;
+}

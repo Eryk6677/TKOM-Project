@@ -1,0 +1,8 @@
+# Return INT on VOID
+def void main() {
+    int returnedStringValue = getStringValue();
+}
+
+def void getStringValue() {
+    return "test";
+}

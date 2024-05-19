@@ -1,0 +1,95 @@
+type-specifier              ::== "bool"
+                               | "string"
+                               | "int"
+                               | "float" ;
+
+identifier                  ::== lowercase-char , { character | digit | "_" } ;
+
+literal                     ::== integer-l
+                               | float-l
+                               | bool-l
+                               | string-l ;
+
+integer-l                   ::== [-] , non-zero-digit, { digit } ;
+float-l                     ::== [-] , ( "0" | { digit } ) , '.' , digit , { digit } ;
+bool-l                      ::== "true"
+                               | "false" ;
+string-l                    ::== '"' , { any-printable-character | "\" , escaping-character } , '"' ;
+
+program                     ::== { variable-definition }
+                               | { function-definition } ;
+
+function-definition         ::== "def" , ( type-specifier | "void" ) , identifier , "(" , [parameters] , ")" , "{" statement , { statement } "}" ;
+
+parameters                  ::== ["mut"] , type-specifier , ["?"] , identifier , { "," , parameters } ;
+
+statement                   ::== variable-definition
+                               | expression , ";"
+                               | if-else-statement
+                               | while-statement
+                               | jump-statement
+                               | exist-statement
+                               | pattern-matching-statement , ";" ;
+
+variable-definition         ::== ["mut"] , type-specifier , ["?"] , identifier , [ "=" , expression ] , ";" ;
+
+identifier-OR-func-call     ::== identifier [ "(" , [arguments] , ")" ] ;
+
+arguments                   ::== expression { "," , arguments } ;
+
+expression                  ::== { identifier , "=" } , logical-or-expression
+
+logical-or-expression       ::== logical-and-expression { "||" , logical-and-expression } ;
+
+logical-and-expression      ::== equality-expression { "&&" , equality-expression } ;
+
+equality-expression         ::== relational-expression { "==" , relational-expression
+                                                       | "!=" , relational-expression } ;
+
+relational-expression       ::== additive-expression { "<" , additive-expression
+                                                     | ">" , additive-expression
+                                                     | "<=" , additive-expression
+                                                     | ">=" , additive-expression };
+
+additive-expression         ::== multiplicative-expression { "+" , multiplicative-expression
+ 		                                                   | "-" , multiplicative-expression } ;
+
+multiplicative-expression   ::== primary-expression { "*" , primary-expression
+ 			                                        | "/" , primary-expression
+ 			                                        | "%" , primary-expression } ;
+
+primary-expression          ::== [not] , "(" , expression , ")"
+                                       | literal
+                                       | identifier-OR-func-call ;
+
+not                         ::== "!" | "-";
+
+while-statement             ::== "while" , "(" , expression , ")" , "{" statement , {statement} "}" ;
+
+if-statement                ::== "if" , "(" , expression , ")" , "{" statement , {statement} "}" , [ elif-statement , {elif-statement} ] , [ else-statement ] ;
+
+elif-statement              ::== "elif" , "(" , expression , ")" , "{" statement , {statement} "}" ;
+
+else-statement              ::== "else" , "{" statement , {statement} "}" ;
+
+jump-statement              ::== "continue"
+                               | "break"
+                               | "return" , [ expression ] ;
+
+exist-statement             ::== "exist" , "(" identifier ")" , "{" statement , {statement} "}" , else-statement ;
+
+pattern-matching-statement  ::== "match" , "(" , expression , ")" , "{" match-statement , {match-statement} "}" ;
+
+match-statement             ::== match-or-expression , "=>" , "{" , statement , {statement} "}" ;
+
+match-or-expression         ::== match-and-expression { "||" , match-and-expression } ;
+
+match-and-expression        ::== match-comp-or-predicate { "&&" , match-comp-or-predicate } ;
+
+match-comp-or-predicate     ::== [!] , "(" match-or-expression ")"
+                                     | match-compare-exp
+                                     | predicate ;
+
+predicate                   ::== identifier ;
+
+match-compare-exp           ::== ("<" | ">" | "<=" | ">=" | "==" | "!=") , primary-expression ;

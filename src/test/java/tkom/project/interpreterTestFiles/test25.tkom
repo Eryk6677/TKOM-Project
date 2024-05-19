@@ -1,0 +1,10 @@
+# Return BOOL
+def void main() {
+    bool returnedBoolValue = getBooleanValue();
+
+    print(to_string(returnedBoolValue));
+}
+
+def bool getBooleanValue() {
+    return true;
+}

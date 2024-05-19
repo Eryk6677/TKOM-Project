@@ -1,0 +1,6 @@
+def void main() {
+    string initial = "test";
+    int new = to_int(initial);
+
+    print(to_string(new));
+}

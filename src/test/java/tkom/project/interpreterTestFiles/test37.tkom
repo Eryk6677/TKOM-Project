@@ -1,0 +1,4 @@
+# restricted var name
+def void main() {
+    int var = 10;
+}

@@ -1,0 +1,24 @@
+def void main() {
+    int number = 7;
+
+    match(number) {
+        >10 || is_even => {
+            print("OP1");
+        }
+        <10 || is_odd => {
+            print("OP2");
+        }
+    }
+}
+
+def bool is_even(int num) {
+    if(num%2 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+def bool is_odd(int num) {
+    return !is_even(num);
+}

@@ -1,0 +1,6 @@
+def void main() {
+    int num = 3;
+    bool result = (num < 6) && (num > 10);
+
+    print(to_string(result));
+}

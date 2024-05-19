@@ -1,0 +1,7 @@
+# fromIntToInt
+def void main() {
+    int initial = 1;
+    int new = to_int(initial);
+
+    print(to_string(new));
+}

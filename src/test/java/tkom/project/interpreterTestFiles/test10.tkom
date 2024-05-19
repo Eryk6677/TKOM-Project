@@ -1,0 +1,5 @@
+# fromStringToFloatException
+def void main() {
+    string initial = "test";
+    to_float(initial);
+}

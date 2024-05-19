@@ -1,0 +1,6 @@
+def void main() {
+    int number = 5;
+    int result = number+number*number;
+
+    print(to_string(result));
+}

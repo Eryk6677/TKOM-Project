@@ -1,0 +1,10 @@
+# fromBoolToInt
+def void main() {
+    bool initial1 = true;
+    bool initial2 = false;
+
+    int new1 = to_int(initial1);
+    int new2 = to_int(initial2);
+
+    print(to_string(new1)+" "+to_string(new2));
+}

@@ -1,0 +1,5 @@
+# fromFloatToBool
+def void main() {
+    float initial = 123.345;
+    to_bool(initial);
+}

@@ -1,0 +1,16 @@
+# while-continue
+def void main() {
+    mut int number = 1;
+
+    mut int iterator = 1;
+    while (iterator < 100) {
+        if (iterator%2 == 0) {
+            iterator = iterator+1;
+            continue;
+        } else {
+            iterator = iterator+1;
+            number = number+1;
+        }
+    }
+    print(to_string(number));
+}

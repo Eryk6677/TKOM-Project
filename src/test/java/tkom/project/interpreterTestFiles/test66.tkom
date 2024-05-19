@@ -1,0 +1,7 @@
+def void main() {
+    int test = someFun();
+}
+
+def int someFun() {
+    break;
+}

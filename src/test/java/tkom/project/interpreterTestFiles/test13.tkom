@@ -1,0 +1,14 @@
+# fromStringToBool
+def void main() {
+    string initial1 = "true";
+    string initial2 = "TrUe";
+    string initial3 = "false";
+    string initial4 = "test";
+
+    bool new1 = to_bool(initial1);
+    bool new2 = to_bool(initial2);
+    bool new3 = to_bool(initial3);
+    bool new4 = to_bool(initial4);
+
+    print(to_string(new1)+" "+to_string(new2)+" "+to_string(new3)+" "+to_string(new4));
+}

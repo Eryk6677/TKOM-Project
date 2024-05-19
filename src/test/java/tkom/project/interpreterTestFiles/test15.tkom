@@ -1,0 +1,6 @@
+# fromIntToString
+def void main() {
+    int initial = 456;
+    string new = to_string(initial);
+    print(new);
+}

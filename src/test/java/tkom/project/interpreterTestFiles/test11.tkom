@@ -1,0 +1,12 @@
+# fromIntToBool
+def void main() {
+    int initial1 = 0;
+    int initial2 = -5;
+    int initial3 = 17;
+
+    bool new1 = to_bool(initial1);
+    bool new2 = to_bool(initial2);
+    bool new3 = to_bool(initial3);
+
+    print(to_string(new1)+" "+to_string(new2)+" "+to_string(new3));
+}

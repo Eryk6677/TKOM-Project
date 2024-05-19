@@ -1,0 +1,5 @@
+def void main() {
+    int result = 1+1+1+(1+1+1)+((1+(1+1)));
+
+    print(to_string(result));
+}

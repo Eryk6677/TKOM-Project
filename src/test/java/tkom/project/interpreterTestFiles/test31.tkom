@@ -1,0 +1,8 @@
+# incorrect amount of params
+def void main() {
+    print(to_string(sum(1, 2, 3)));
+}
+
+def int sum(int num1, int num2) {
+    return num1+num2;
+}

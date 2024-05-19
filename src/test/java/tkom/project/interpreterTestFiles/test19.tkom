@@ -1,0 +1,10 @@
+# funcCallNoParams
+string name = "Name";
+
+def void main() {
+    print(getName());
+}
+
+def string getName() {
+    return name;
+}
